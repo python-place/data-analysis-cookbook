@@ -4,7 +4,7 @@ from numpy import int64, array
 from scipy import stats
 from scipy.stats._mstats_basic import ModeResult
 
-covid_data = pd.read_csv("covid-data.csv")
+covid_data = pd.read_csv("owid-covid-data.csv")
 covid_data = covid_data[['iso_code', 'continent', 'location', 'date', 'total_cases', 'new_cases']]
 
 data_mode = stats.mode(covid_data["new_cases"])
